@@ -38,7 +38,7 @@ const SplitContainer = ({
         <img
           src={imageUrl}
           alt={altText}
-          className="rounded-lg h-64 object-fill shadow-lg hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out"
+          className="w-full sm:w-auto h-auto max-h-96 sm:max-h-[18rem] md:max-h-[22rem] lg:max-h-[28rem] rounded-lg object-cover shadow-lg hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out"
         />
       </div>
     </div>

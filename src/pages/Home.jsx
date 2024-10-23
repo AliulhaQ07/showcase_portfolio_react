@@ -2,10 +2,16 @@ import React from "react";
 import Heading from "../components/Heading.jsx";
 import Button from "../components/Button.jsx";
 import Cv from "../assets/ALIULHAQV3.pdf";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="font-montserrat relative h-screen bg-gray-900 text-white overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "ease-in" }}
+      className="font-montserrat relative h-screen bg-gray-900 text-white overflow-hidden"
+    >
       {/* Background Text - 'Developer' */}
       <p
         className="
@@ -98,7 +104,7 @@ const Home = () => {
           <Button text={"DOWNLOAD CV"} downloadUrl={Cv} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

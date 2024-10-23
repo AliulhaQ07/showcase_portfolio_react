@@ -2,17 +2,18 @@ import React from "react";
 
 const ContactMeDesign = ({ Icon, text }) => {
   return (
-    <>
-      <div className="flex justify-start items-center bg-gray-600 rounded-lg p-2 gap-4 my-3 shadow">
-        {/* Dynamic Icon */}
-        {Icon && <Icon className="text-white text-2xl" />}{" "}
-        {/* Larger icon size */}
-        <div className="h-10 border-l-2 border-white"></div>{" "}
-        {/* Taller and more defined border */}
-        <p className="text-white text-md font-medium">{text}</p>{" "}
-        {/* Increased text size and weight */}
-      </div>
-    </>
+    <div className="flex items-center bg-gray-700 rounded-lg p-4 gap-4 my-4 shadow max-w-2xl mx-auto">
+      {/* Dynamic Icon */}
+      {Icon && (
+        <Icon className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl" />
+      )}
+      {/* Divider */}
+      <div className="h-10 sm:h-12 border-l-2 border-white"></div>
+      {/* Text */}
+      <p className="text-white text-sm sm:text-md md:text-lg lg:text-xl font-medium">
+        {text}
+      </p>
+    </div>
   );
 };
 

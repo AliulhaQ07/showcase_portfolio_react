@@ -43,9 +43,11 @@ const Header = () => {
     <div className="font-montserrat bg-gray-900 p-5 flex justify-between items-center text-white border-b border-b-gray-800">
       {/*    LOGO   */}
       <div>
-        <p className=" sm:text-sm md:text-md lg:text-lg hover:text-indigo-200 duration-300 uppercase font-medium">
-          ALI ZIA
-        </p>
+        <Link to="/home">
+          <p className=" sm:text-sm md:text-md lg:text-lg hover:text-indigo-200 duration-300 uppercase font-medium">
+            ALI ZIA
+          </p>
+        </Link>
       </div>
 
       {/*    LINKS FOR LARGE SCREENS */}
