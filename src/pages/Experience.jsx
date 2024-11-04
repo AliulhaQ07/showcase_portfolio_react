@@ -5,70 +5,131 @@ import js from "../assets/images/js.png";
 import react from "../assets/images/physics.png";
 import bootstrap from "../assets/images/bootstrap.png";
 import github from "../assets/images/github.png";
+import tailwindcss from "../assets/images/tailwindcss.png"
+import framermotion from '../assets/images/framer-motion.svg'
 import ExperienceDivDesign from "../components/ExperienceDivDesign.jsx";
+import {motion} from 'framer-motion'
 
 const Experience = () => {
   return (
-    <div className="font-montserrat h-screen flex flex-col items-center justify-start bg-gray-900 gap-4 text-white py-4">
+
+    <div className = "font-montserrat h-auto flex flex-col items-center justify-start gap-4 p-3" >
       {/* Heading */}
-      <h1 className="font-bold text-2xl mb-8">EXPERIENCE</h1>
+      <h1 className = "font-bold text-2xl mb-8" >EXPERIENCE</h1 >
       {/* Responsive container for content */}
-      <div className="w-full max-w-7xl mx-auto p-8 md:p-8 bg-gray-800 rounded">
+      <div className = "w-full max-w-7xl mx-auto p-8 md:p-8 border rounded shadow-sm" >
+
         {/* Experience items */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
-          <ExperienceDivDesign text={"HTML"} imgUrl={html} />
-          <ExperienceDivDesign text={"CSS"} imgUrl={css} />
-          <ExperienceDivDesign text={"JAVA SCRIPT"} imgUrl={js} />
-          <ExperienceDivDesign text={"REACT"} imgUrl={react} />
-          <ExperienceDivDesign text={"BOOTSTRAP"} imgUrl={bootstrap} />
-          <ExperienceDivDesign text={"GITHUB"} imgUrl={github} />
-        </div>
-      </div>
+        <div className = "grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-6 gap-10 md:gap-8 " >
+          <ExperienceDivDesign text = {"HTML"} imgUrl = {html} />
+          <ExperienceDivDesign text = {"CSS"} imgUrl = {css} />
+          <ExperienceDivDesign text = {"JAVA SCRIPT"} imgUrl = {js} />
+          <ExperienceDivDesign text = {"REACT"} imgUrl = {react} />
+          <ExperienceDivDesign text = {"BOOTSTRAP"} imgUrl = {bootstrap} />
+          <ExperienceDivDesign text = {"GITHUB"} imgUrl = {github} />
+          <ExperienceDivDesign text = {"TAILWINDCSS"} imgUrl = {tailwindcss} />
+          <ExperienceDivDesign text = {"FRAMER-MOTION"} imgUrl = {framermotion} />
+        </div >
+
+      </div >
+
+
       {/* Responsive container for content */}
-      <div className="w-full max-w-7xl mx-auto p-8 md:p-8 bg-gray-800 rounded  ">
-        <h1 className="text-xl font-semibold  mt-6 mb-3">
-          WEB DEVELOPER & DESIGNER
-        </h1>
-        <p className="text-white leading-relaxed">
-          I am a{" "}
-          <span className="font-semibold ">passionate Web Developer</span> with
-          a strong foundation in
-          <span className="font-semibold "> HTML</span>,
-          <span className="font-semibold ">CSS</span>,
-          <span className="font-semibold "> JavaScript</span>, and frameworks
-          like
-          <span className="font-semibold"> Bootstrap</span> and
-          <span className="font-semibold "> Tailwind CSS</span>. I specialize in
-          designing and developing
-          <span className="font-semibold "> responsive</span>,
-          <span className="font-semibold">user-friendly websites</span> that
-          deliver excellent user experiences.
-        </p>
+      <div className = "w-full max-w-7xl mx-auto p-8 md:p-8 border rounded shadow-sm  flex flex-col gap-8" >
 
-        <h2 className="text-xl font-semibold  mt-6 mb-3">React Expertise</h2>
-        <p className="text-gray-100 leading-relaxed">
-          My skills extend to <span className="font-semibold ">React</span>,
-          where I focus on building
-          <span className="font-semibold "> dynamic</span>,
-          <span className="font-semibold ">component-based applications</span>.
-        </p>
+        <div >
+          <h1 className = "text-xl font-semibold  my-3 uppercase " >
+            WEB DEVELOPER & DESIGNER
+          </h1 >
 
-        <h2 className="text-xl font-semibold mt-6 mb-3">UI/UX Design</h2>
-        <p className="text-white leading-relaxed">
-          In addition to my web development expertise, I have hands-on
-          experience in
-          <span className="font-semibold"> UI/UX design</span>, working with
-          <span className="font-semibold">Figma</span> to create intuitive
-          interfaces for web and mobile applications. I conduct{" "}
-          <span className="font-semibold">user research</span>, design
-          <span className="font-semibold"> wireframes</span> and
-          <span className="font-semibold"> prototypes</span>, and iterate on
-          feedback to ensure that my designs meet
-          <span className="font-semibold"> user needs</span>.
-        </p>
-      </div>
-    </div>
-  );
+          <ul className = 'list-none flex flex-col gap-2' >
+            <li >Experienced frontend web developer with a focus on building responsive, user-centered applications.
+            </li >
+            <li >Skilled in HTML, CSS, JavaScript, and React, with additional expertise in Tailwind CSS and Bootstrap.
+            </li >
+            <li >Proficient in using GitHub for version control and collaborative development.</li >
+          </ul >
+
+
+        </div >
+
+
+        <ul className = 'list-none flex flex-col gap-3 ' >
+
+          <h1 className = "text-xl font-semibold  uppercase " >
+           Recently worked at Future Vision, Lahore, where I:
+          </h1 >
+
+          <li > Collaborated closely with cross-functional teams.
+          </li >
+          <li > Implemented modern frontend development techniques.</li >
+          <li > Designed intuitive, user-focused interfaces.</li >
+        </ul >
+
+
+        <ul className = 'list-none flex flex-col gap-4' >
+          <h1 className = "text-xl font-semibold uppercase  " >
+          PROJECTS: 
+          </h1 >
+          <li ><span className = 'font-semibold' >Campus Management System:</span > A comprehensive web application
+                                                                                  developed as my final year project,
+                                                                                  designed to streamline campus
+                                                                                  administrative tasks. Built with
+                                                                                  Django as the backend framework,
+                                                                                  Bootstrap for responsive UI, and MySQL
+                                                                                  for managing student and faculty
+                                                                                  databases, this system supports
+                                                                                  modules for attendance tracking,
+                                                                                  course management, and scheduling. The
+                                                                                  platform enhances campus operations by
+                                                                                  centralizing data and providing an
+                                                                                  efficient interface for students,
+                                                                                  faculty, and administrators.
+          </li >
+          <li ><span className = 'font-semibold' >Furniture E-commerce Website Landing Page:</span > A modern, responsive
+                                                                                                   landing page for a
+                                                                                                   furniture e-commerce
+                                                                                                   site. Built with
+                                                                                                   React, Tailwind CSS
+                                                                                                   for styling, and
+                                                                                                   Framer Motion for
+                                                                                                   animations, this page
+                                                                                                   highlights featured
+                                                                                                   collections with
+                                                                                                   smooth transitions.
+                                                                                                   React Router enables
+                                                                                                   seamless page
+                                                                                                   navigation, and state
+                                                                                                   management handles
+                                                                                                   product details.
+          </li >
+          <li ><span className = 'font-semibold' >Car Rental Website Landing Page:</span > A dynamic landing page for a
+                                                                                         car rental service featuring
+                                                                                         car categories, rental
+                                                                                         services, and booking options.
+                                                                                         Developed using React and
+                                                                                         Tailwind CSS for a clean UI,
+                                                                                         Framer Motion for engaging
+                                                                                         animations, and React Router
+                                                                                         for navigation across car
+                                                                                         listings and service pages.
+          </li >
+          <li ><span className = 'font-semibold' >Personal Portfolio:</span > A personal portfolio website
+                                                                            showcasing skills and projects,
+                                                                            including interactive elements and
+                                                                            smooth page transitions. Built with
+                                                                            React, Tailwind CSS for design
+                                                                            consistency, Framer Motion for
+                                                                            animations, and React Router to enable
+                                                                            smooth transitions between project
+                                                                            sections.
+          </li >
+
+        </ul >
+
+
+      </div >
+    </div >);
 };
 
 export default Experience;

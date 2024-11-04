@@ -2,30 +2,46 @@ import React from "react";
 import Heading from "../components/Heading.jsx";
 import Button from "../components/Button.jsx";
 import Cv from "../assets/ALIULHAQV3.pdf";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 const Home = () => {
+  // Define the pulsing animation variant
+  const pulseVariant = {
+    pulse: {
+      scale: [1, 0.9, 1],         // Increased scale up to make it more noticeable
+      opacity: [1, 0.7, 1],       // Lower opacity for a more visible fade effect
+      transition: {
+        duration: 1,             // Slightly faster pulse cycle
+        ease: "easeInOut",       // Smooth in and out easing for a natural pulse
+        repeat: Infinity,        // Infinite repeat
+        repeatType: "reverse",   // Reverses the animation for a smoother loop
+      },
+    },
+  };
+
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "ease-in" }}
-      className="font-montserrat relative h-screen bg-gray-900 text-white overflow-hidden"
+      initial = {{opacity: 0}}
+      animate = {{opacity: 1}}
+      transition = {{duration: 1, ease: "ease-in"}}
+      className = "font-montserrat relative h-[90vh] overflow-hidden"
     >
       {/* Background Text - 'Developer' */}
-      <p
-        className="
+      <motion.p
+        variants = {pulseVariant}
+        initial = "pulse"
+        animate = "pulse"
+        className = "
           absolute inset-3
           text-4xl
           sm:text-6xl
           md:text-[6rem]
           lg:text-[6.5rem]
           font-bold
-          text-gray-700
+          text-indigo-300
           opacity-80
           z-0
-          transform
-          rotate-[0deg]
           pointer-events-none
           select-none
           flex
@@ -34,22 +50,23 @@ const Home = () => {
           uppercase"
       >
         Developer
-      </p>
+      </motion.p >
 
       {/* Background Text - '&' */}
-      <p
-        className="
+      <motion.p
+        variants = {pulseVariant}
+        initial = "pulse"
+        animate = "pulse"
+        className = "
           absolute inset-6
           text-9xl
           sm:text-9xl
           md:text-[12rem]
           lg:text-[18rem]
           font-bold
-          text-gray-600
+          text-indigo-200
           opacity-40
           z-0
-          transform
-          rotate-[0deg]
           pointer-events-none
           select-none
           flex
@@ -58,22 +75,23 @@ const Home = () => {
           uppercase"
       >
         &
-      </p>
+      </motion.p >
 
-      {/* Background Text - 'designer' */}
-      <p
-        className="
+      {/* Background Text - 'Designer' */}
+      <motion.p
+        variants = {pulseVariant}
+        initial = "pulse"
+        animate = "pulse"
+        className = "
           absolute inset-6
           text-4xl
           sm:text-6xl
           md:text-[6rem]
           lg:text-[6.5rem]
           font-bold
-          text-gray-700
+          text-indigo-300
           opacity-80
           z-0
-          transform
-          rotate-[0deg]
           pointer-events-none
           select-none
           flex
@@ -82,29 +100,27 @@ const Home = () => {
           uppercase"
       >
         Designer
-      </p>
+      </motion.p >
 
       {/* Foreground Content */}
-      <div className="relative z-10 flex items-center justify-center h-full container mx-auto px-6">
-        {/* Flex column for positioning the headings */}
-        <div className="flex flex-col justify-center items-center gap-6">
-          {/* Headings */}
-          <p className="uppercase font-bold text-gray-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-            <Heading text={"I'm a React Js"} />
-          </p>
+      <div className = "relative z-10 flex items-center justify-center h-full container mx-auto px-6" >
+        <div className = "flex flex-col justify-center items-center gap-4" >
+          <p className = "uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl" >
+            <Heading text = {"I'm a React Js"} />
+          </p >
 
-          <p className="uppercase font-bold text-gray-50 text-xl sm:text-2xl md:text-3xl lg:text-6xl">
-            <Heading text="Web Developer &" />
-          </p>
+          <p className = "uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl" >
+            <Heading text = "Web Developer &" />
+          </p >
 
-          <p className="uppercase font-bold text-gray-50 text-xl sm:text-2xl md:text-3xl lg:text-6xl">
-            <Heading text="Web Designer (UI/UX)" />
-          </p>
+          <p className = "uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl" >
+            <Heading text = "Web Designer (UI/UX)" />
+          </p >
 
-          <Button text={"DOWNLOAD CV"} downloadUrl={Cv} />
-        </div>
-      </div>
-    </motion.div>
+          <Button text = {"DOWNLOAD CV"} downloadUrl = {Cv} />
+        </div >
+      </div >
+    </motion.div >
   );
 };
 

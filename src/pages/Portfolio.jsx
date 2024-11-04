@@ -1,8 +1,8 @@
-import React, { useState } from "react";
 import PortfolioNavButton from "../components/PortfolioNavButton.jsx";
 import SplitContainer from "../components/SplitContainer.jsx";
 
 import realEstate from "../assets/realestate.png";
+import {useState} from "react";
 
 const Portfolio = () => {
   // State to track the current section
@@ -13,10 +13,11 @@ const Portfolio = () => {
     setCurrentSection(section);
   };
 
+
   return (
     <>
       {/* MASTER CONTAINER FOR MOBILE DESIGN */}
-      <div className="font-montserrat h-auto flex flex-col items-center justify-start bg-gray-900 gap-4 text-white py-4 ">
+      <div className="font-montserrat h-auto flex flex-col items-center justify-start  gap-4  py-4 ">
         {/* Navigation Buttons */}
         <div className="my-2 container flex flex-wrap gap-6 justify-center">
           <PortfolioNavButton

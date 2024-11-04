@@ -10,9 +10,9 @@ const AboutMeDesign = ({
   buttonLink = "#",
 }) => {
   return (
-    <div className="flex flex-col md:flex-row h-full w-full p-6 md:p-8 gap-8 ">
+    <div className="flex flex-col md:flex-row h-full w-full p-2 md:px-2 gap-4 ">
       {/* Left Side: Heading, Subheading, Description */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-white p-12">
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
           {mainHeading}
         </h1>
@@ -25,7 +25,7 @@ const AboutMeDesign = ({
           href={buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-br from-sky-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition"
+          className="bg-gradient-to-br from-sky-500 to-purple-500  text-white px-4 py-2 rounded-lg hover:opacity-90 transition"
         >
           {buttonText}
         </a>
@@ -36,7 +36,7 @@ const AboutMeDesign = ({
         <img
           src={imageUrl}
           alt={altText}
-          className="rounded-lg w-full sm:w-3/4 h-64 object-cover shadow-lg hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out"
+          className="rounded  w-full h-auto sm:w-3/4 object-contain  my-2"
         />
       </div>
     </div>

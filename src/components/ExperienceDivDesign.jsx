@@ -5,7 +5,7 @@ const ExperienceDivDesign = ({ text, imgUrl }) => {
       <img
         src={imgUrl}
         alt="img.."
-        className="h-24 hover:-translate-y-1/4 duration-300 transition ease-in-out"
+        className="h-24 hover:-translate-y-1.5 duration-300 transition ease-in-out"
       />
       <div className="font-medium duration-200 ">{text}</div>
     </div>

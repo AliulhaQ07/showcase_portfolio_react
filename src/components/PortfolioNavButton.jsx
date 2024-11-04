@@ -10,12 +10,13 @@ const PortfolioNavButton = ({
   isActive = false, // New prop to determine if the button is active
   padding = "p-3",
   rounded = "rounded",
+  border = "border-2",
   transition = "transition duration-300",
   onClick,
 }) => {
   return (
     <button
-      className={`${isActive ? `${activeBgColor} ${activeTextColor}` : `${bgColor} ${textColor}`}
+      className={`${isActive ? `${activeBgColor} ${activeTextColor} ${border}` : `${bgColor} ${textColor} `}
       ${padding} ${rounded} ${hoverColor} ${transition}`}
       onClick={onClick}
     >

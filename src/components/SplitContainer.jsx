@@ -10,9 +10,9 @@ const SplitContainer = ({
   buttonLink = "#",
 }) => {
   return (
-    <div className="flex flex-col md:flex-row h-full border p-8 m-8 ">
+    <div className="flex flex-col md:flex-row h-auto border  m-2 ">
       {/* Left Side: Heading, Subheading, Description */}
-      <div className="w-full md:w-1/2 p-6 text-white flex flex-col justify-center items-start mx-auto">
+      <div className="w-full md:w-1/2 p-6 flex flex-col justify-center items-start mx-auto">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
           {mainHeading}
         </h1>
@@ -38,7 +38,7 @@ const SplitContainer = ({
         <img
           src={imageUrl}
           alt={altText}
-          className="w-full sm:w-auto h-auto max-h-96 sm:max-h-[18rem] md:max-h-[22rem] lg:max-h-[28rem] rounded-lg object-cover shadow-lg hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out"
+          className="w-full sm:w-auto h-auto max-h-96 sm:max-h-[18rem] md:max-h-[22rem] lg:max-h-[28rem] rounded object-cover shadow-sm hover:shadow-2xl hover:-translate-y-4 transform transition duration-300 ease-in-out"
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // Import useState hook
 import Button from "../components/Button.jsx";
-import { Link } from "react-router-dom"; // Import Link
+import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
 import { RxHamburgerMenu } from "react-icons/rx"; // Import Hamburger Icon
 
 const navLinks = [
@@ -40,34 +40,36 @@ const Header = () => {
   };
 
   return (
-    <div className="font-montserrat bg-gray-900 p-5 flex justify-between items-center text-white border-b border-b-gray-800">
-      {/*    LOGO   */}
+    <div className="font-montserrat p-5 flex justify-between items-center shadow-sm border">
+      {/* LOGO */}
       <div>
-        <Link to="/home">
-          <p className=" sm:text-sm md:text-md lg:text-lg hover:text-indigo-200 duration-300 uppercase font-medium">
+        <NavLink to="/home">
+          <p className="sm:text-sm md:text-md lg:text-lg hover:text-indigo-500 duration-300 uppercase font-medium">
             ALI ZIA
           </p>
-        </Link>
+        </NavLink>
       </div>
 
-      {/*    LINKS FOR LARGE SCREENS */}
+      {/* LINKS FOR LARGE SCREENS */}
       <div className={"hidden lg:block"}>
         <ul className="flex gap-4">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <Link
+              <NavLink
                 to={link.url}
-                className="sm:text-sm md:text-md lg:text-lg hover:text-indigo-300 duration-300 uppercase font-medium hover:cursor-pointer "
+                className={({ isActive }) =>
+                  `sm:text-sm md:text-md lg:text-lg hover:text-indigo-500 duration-300 uppercase font-medium ${isActive ? "text-indigo-500 font-bold" : ""}`
+                }
               >
                 {link.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
       </div>
 
-      {/*    CALL-TO-ACTION BUTTON FOR LARGE SCREENS */}
-      <div className=" sm:text-sm md:text-md lg:text-md hidden lg:block">
+      {/* CALL-TO-ACTION BUTTON FOR LARGE SCREENS */}
+      <div className="sm:text-sm md:text-md lg:text-md hidden lg:block">
         <Button text={"CONTACT ME"} />
       </div>
 
@@ -79,24 +81,26 @@ const Header = () => {
         />
       </div>
 
-      {/*    DROPDOWN MENU */}
+      {/* DROPDOWN MENU */}
       {isMenuOpen && (
-        <div className="absolute top-16 right-0 bg-gray-900 text-white shadow-lg p-4 w-full lg:hidden z-50">
-          <ul className="flex flex-col gap-3">
+        <div className="absolute top-16 right-0 bg-gray-50 shadow-sm p-4 w-full border lg:hidden z-50">
+          <ul className="flex flex-col gap-8 justify-center">
             {navLinks.map((link) => (
               <li key={link.id}>
-                <Link
+                <NavLink
                   to={link.url}
-                  className="block text-md hover:text-indigo-300 duration-300 uppercase font-medium hover:cursor-pointer"
+                  className={({ isActive }) =>
+                    `block text-md hover:text-indigo-300 duration-300 uppercase font-medium ${isActive ? "text-indigo-500 font-bold" : ""}`
+                  }
                   onClick={() => setIsMenuOpen(false)} // Close the menu on link click
                 >
                   {link.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
 
-          {/*    CALL-TO-ACTION BUTTON IN DROPDOWN */}
+          {/* CALL-TO-ACTION BUTTON IN DROPDOWN */}
           {/*<div className="mt-4">*/}
           {/*  <Button text={"CONTACT ME"} />*/}
           {/*</div>*/}
