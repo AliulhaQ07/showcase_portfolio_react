@@ -131,6 +131,7 @@ const Portfolio = () => {
           </>
         )}
 
+        c
         {currentSection === "WEBSITE PROJECTS" && (
           <>
             <SplitContainer
