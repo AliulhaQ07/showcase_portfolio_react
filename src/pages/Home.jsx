@@ -1,6 +1,7 @@
 import Heading from "../components/Heading.jsx";
 import Button from "../components/Button.jsx";
-import Cv from "../assets/ALIULHAQV3.pdf";
+// import Cv from "../assets/ALIULHAQV3.pdf";
+import resume from "../assets/AliulhaqCV.pdf";
 import {motion} from "framer-motion";
 
 const Home = () => {
@@ -62,8 +63,8 @@ const Home = () => {
           md:text-[12rem]
           lg:text-[18rem]
           font-bold
-          text-indigo-200
-          opacity-40
+          text-gray-200
+          opacity-80
           z-0
           pointer-events-none
           select-none
@@ -103,20 +104,20 @@ const Home = () => {
     {/* Foreground Content */}
     <div className="relative z-10 flex items-center justify-center h-full container mx-auto px-6">
       <div className="flex flex-col justify-center items-center gap-4">
-        <p className="uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+        <p className="uppercase font-bold text-xl sm:text-2xl md:text-4xl lg:text-5xl">
           <Heading text={"I'm a React Js"}/>
         </p>
 
-        <p className="uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl">
+        <p className="uppercase font-bold text-xl sm:text-2xl md:text-4xl lg:text-7xl">
           <Heading text="Web Developer &"/>
         </p>
 
-        <p className="uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl">
+        <p className="uppercase font-bold text-xl sm:text-2xl md:text-4xl lg:text-7xl">
           <Heading text="Web Designer (UI/UX)"/>
         </p>
 
 
-        <Button text={"DOWNLOAD CV"} downloadUrl={Cv}/>
+        <Button text={"DOWNLOAD CV"} downloadUrl={resume}/>
       </div>
     </div>
   </motion.div>);
