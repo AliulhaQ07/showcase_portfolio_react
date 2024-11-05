@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../components/Heading.jsx";
 import Button from "../components/Button.jsx";
 import Cv from "../assets/ALIULHAQV3.pdf";
@@ -20,19 +19,18 @@ const Home = () => {
   };
 
 
-  return (
-    <motion.div
-      initial = {{opacity: 0}}
-      animate = {{opacity: 1}}
-      transition = {{duration: 1, ease: "ease-in"}}
-      className = "font-montserrat relative h-[90vh] overflow-hidden"
-    >
-      {/* Background Text - 'Developer' */}
-      <motion.p
-        variants = {pulseVariant}
-        initial = "pulse"
-        animate = "pulse"
-        className = "
+  return (<motion.div
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{duration: 1, ease: "ease-in"}}
+    className="font-montserrat relative h-[90vh] overflow-hidden"
+  >
+    {/* Background Text - 'Developer' */}
+    <motion.p
+      variants={pulseVariant}
+      initial="pulse"
+      animate="pulse"
+      className="
           absolute inset-3
           text-4xl
           sm:text-6xl
@@ -48,16 +46,16 @@ const Home = () => {
           items-start
           justify-start
           uppercase"
-      >
-        Developer
-      </motion.p >
+    >
+      Developer
+    </motion.p>
 
-      {/* Background Text - '&' */}
-      <motion.p
-        variants = {pulseVariant}
-        initial = "pulse"
-        animate = "pulse"
-        className = "
+    {/* Background Text - '&' */}
+    <motion.p
+      variants={pulseVariant}
+      initial="pulse"
+      animate="pulse"
+      className="
           absolute inset-6
           text-9xl
           sm:text-9xl
@@ -73,16 +71,16 @@ const Home = () => {
           items-center
           justify-center
           uppercase"
-      >
-        &
-      </motion.p >
+    >
+      &
+    </motion.p>
 
-      {/* Background Text - 'Designer' */}
-      <motion.p
-        variants = {pulseVariant}
-        initial = "pulse"
-        animate = "pulse"
-        className = "
+    {/* Background Text - 'Designer' */}
+    <motion.p
+      variants={pulseVariant}
+      initial="pulse"
+      animate="pulse"
+      className="
           absolute inset-6
           text-4xl
           sm:text-6xl
@@ -98,30 +96,30 @@ const Home = () => {
           items-end
           justify-end
           uppercase"
-      >
-        Designer
-      </motion.p >
+    >
+      Designer
+    </motion.p>
 
-      {/* Foreground Content */}
-      <div className = "relative z-10 flex items-center justify-center h-full container mx-auto px-6" >
-        <div className = "flex flex-col justify-center items-center gap-4" >
-          <p className = "uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl" >
-            <Heading text = {"I'm a React Js"} />
-          </p >
+    {/* Foreground Content */}
+    <div className="relative z-10 flex items-center justify-center h-full container mx-auto px-6">
+      <div className="flex flex-col justify-center items-center gap-4">
+        <p className="uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          <Heading text={"I'm a React Js"}/>
+        </p>
 
-          <p className = "uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl" >
-            <Heading text = "Web Developer &" />
-          </p >
+        <p className="uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl">
+          <Heading text="Web Developer &"/>
+        </p>
 
-          <p className = "uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl" >
-            <Heading text = "Web Designer (UI/UX)" />
-          </p >
+        <p className="uppercase font-bold text-xl sm:text-2xl md:text-3xl lg:text-6xl">
+          <Heading text="Web Designer (UI/UX)"/>
+        </p>
 
-          <Button text = {"DOWNLOAD CV"} downloadUrl = {Cv} />
-        </div >
-      </div >
-    </motion.div >
-  );
+
+        <Button text={"DOWNLOAD CV"} downloadUrl={Cv}/>
+      </div>
+    </div>
+  </motion.div>);
 };
 
 export default Home;
