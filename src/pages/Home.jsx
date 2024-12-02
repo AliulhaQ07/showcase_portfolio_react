@@ -1,126 +1,45 @@
-import Heading from "../components/Heading.jsx";
+import React from 'react';
 import Button from "../components/Button.jsx";
-// import Cv from "../assets/ALIULHAQV3.pdf";
-import resume from "../assets/AliulhaqCV.pdf";
-import {motion} from "framer-motion";
+import profile from '../assets/profile.png';
+import profile2 from '../assets/Profile2.png';
+import profile3 from '../assets/images/profileimg.png';
 
 const Home = () => {
-  // Define the pulsing animation variant
-  const pulseVariant = {
-    pulse: {
-      scale: [1, 0.9, 1],         // Increased scale up to make it more noticeable
-      opacity: [1, 0.7, 1],       // Lower opacity for a more visible fade effect
-      transition: {
-        duration: 1,             // Slightly faster pulse cycle
-        ease: "easeInOut",       // Smooth in and out easing for a natural pulse
-        repeat: Infinity,        // Infinite repeat
-        repeatType: "reverse",   // Reverses the animation for a smoother loop
-      },
-    },
-  };
+	return (
+		<div className="h-auto sm:h-[80dvh] flex items-center justify-center font-montserrat antialiased  ">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-full px-6 ">
+				{/* LEFT SIDE */}
+				<div className="flex flex-col gap-4 items-start justify-center text-gray-800 mt-10">
+					<div>
+						<h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
+							Hi, I'm Ali Zia
+						</h3>
+						<p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+							Frontend Developer
+						</p>
+					</div>
 
+					<p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-600">
+						High-level experience in web design and development knowledge,
+						producing quality work.
+					</p>
+					<div className='flex gap-4'>
+						<Button text={'Contact Me'}/>
+						<Button text={'Download Cv'}/>
+					</div>
 
-  return (<motion.div
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    transition={{duration: 1, ease: "ease-in"}}
-    className="font-montserrat relative h-[90vh] overflow-hidden"
-  >
-    {/* Background Text - 'Developer' */}
-    <motion.p
-      variants={pulseVariant}
-      initial="pulse"
-      animate="pulse"
-      className="
-          absolute inset-3
-          text-4xl
-          sm:text-6xl
-          md:text-[6rem]
-          lg:text-[6.5rem]
-          font-bold
-          text-indigo-300
-          opacity-80
-          z-0
-          pointer-events-none
-          select-none
-          flex
-          items-start
-          justify-start
-          uppercase"
-    >
-      Developer
-    </motion.p>
+				</div>
 
-    {/* Background Text - '&' */}
-    <motion.p
-      variants={pulseVariant}
-      initial="pulse"
-      animate="pulse"
-      className="
-          absolute inset-6
-          text-9xl
-          sm:text-9xl
-          md:text-[12rem]
-          lg:text-[18rem]
-          font-bold
-          text-gray-200
-          opacity-80
-          z-0
-          pointer-events-none
-          select-none
-          flex
-          items-center
-          justify-center
-          uppercase"
-    >
-      &
-    </motion.p>
-
-    {/* Background Text - 'Designer' */}
-    <motion.p
-      variants={pulseVariant}
-      initial="pulse"
-      animate="pulse"
-      className="
-          absolute inset-6
-          text-4xl
-          sm:text-6xl
-          md:text-[6rem]
-          lg:text-[6.5rem]
-          font-bold
-          text-indigo-300
-          opacity-80
-          z-0
-          pointer-events-none
-          select-none
-          flex
-          items-end
-          justify-end
-          uppercase"
-    >
-      Designer
-    </motion.p>
-
-    {/* Foreground Content */}
-    <div className="relative z-10 flex items-center justify-center h-full container mx-auto px-6">
-      <div className="flex flex-col justify-center items-center gap-4">
-        <p className="uppercase font-bold text-xl sm:text-2xl md:text-4xl lg:text-5xl">
-          <Heading text={"I'm a React Js"}/>
-        </p>
-
-        <p className="uppercase font-bold text-xl sm:text-2xl md:text-4xl lg:text-7xl">
-          <Heading text="Web Developer &"/>
-        </p>
-
-        <p className="uppercase font-bold text-xl sm:text-2xl md:text-4xl lg:text-7xl">
-          <Heading text="Web Designer (UI/UX)"/>
-        </p>
-
-
-        <Button text={"DOWNLOAD CV"} downloadUrl={resume}/>
-      </div>
-    </div>
-  </motion.div>);
+				{/* RIGHT SIDE */}
+				<div className="flex items-center justify-center">
+					<img
+						src={profile3}
+						alt="profile"
+						className="rounded-lg h-full sm:h-96 w-auto object-cover "
+					/>
+				</div>
+			</div>
+		</div>);
 };
 
 export default Home;
