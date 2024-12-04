@@ -23,6 +23,7 @@ const Home = () => {
 						High-level experience in web design and development knowledge,
 						producing quality work.
 					</p>
+
 					<div className='flex gap-4'>
 						<Button text={'Contact Me'}/>
 						<Button text={'Download Cv'}/>
