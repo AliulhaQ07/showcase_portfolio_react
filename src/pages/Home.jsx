@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from "../components/Button.jsx";
-import profile from '../assets/profile.png';
-import profile2 from '../assets/Profile2.png';
 import profile3 from '../assets/images/profileimg.png';
 
 const Home = () => {
