@@ -4,6 +4,10 @@ import SplitContainer from "../components/SplitContainer.jsx";
 import realEstate from "../assets/realestate.png";
 import {useState} from "react";
 
+import p1 from "../assets/portfolioImages/img.png"
+import p2 from "../assets/portfolioImages/img2.png"
+import p3 from "../assets/portfolioImages/thecodelogs.png"
+
 const Portfolio = () => {
 	// State to track the current section
 	const [currentSection, setCurrentSection] = useState("DESKTOP DESIGN");
@@ -95,10 +99,8 @@ const Portfolio = () => {
 								"An intuitive exam maker platform designed to simplify the creation, distribution, and evaluation of assessments. With user-friendly templates, customizable question types, and robust analytics, educators can efficiently design tests that cater to diverse learning needs. The platform emphasizes accessibility, ensuring that both creators and participants have a seamless experience, while features like automated grading and feedback tools enhance the learning process."
 							}
 							buttonText={"Live Demo"}
-							buttonLink={"#"}
-							imageUrl={
-								"https://images.unsplash.com/photo-1719937050445-098888c0625e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							}
+							buttonLink={"https://www.figma.com/design/vCP1boQn3PBMPGWFfvClAv/exam-maker?node-id=0-1&t=c9jozEqbFMeUh204-1"}
+							imageUrl={p2}
 							altText={"img..."}
 						/>
 						{/*2nd*/}
@@ -124,8 +126,8 @@ const Portfolio = () => {
 								"A dynamic social media platform that encourages interaction and community building among users. Featuring a clean and engaging interface, the platform supports multimedia sharing, real-time messaging, and personalized feeds tailored to user interests. With robust privacy settings and content moderation tools, users can connect safely while exploring diverse perspectives. The platform also integrates innovative features like live streaming and group discussions, fostering a vibrant online ecosystem that promotes creativity and collaboration."
 							}
 							buttonText={"Live Demo"}
-							buttonLink={"#"}
-							imageUrl={realEstate}
+							buttonLink={"https://www.figma.com/design/qrQFR40pOk6Ri54UPSkh65/THE-CODE-LOGS?t=JM8WNfwNwYWentfN-1"}
+							imageUrl={p3}
 							altText={"img..."}
 						/>
 					</>
@@ -141,7 +143,7 @@ const Portfolio = () => {
 							}
 							buttonText={"Live Demo"}
 							buttonLink={"#"}
-							imageUrl={realEstate}
+							imageUrl={p1}
 							altText={"Portfolio Website"}
 						/>
 

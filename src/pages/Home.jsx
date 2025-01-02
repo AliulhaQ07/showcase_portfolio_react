@@ -1,6 +1,7 @@
-import React from 'react';
 import Button from "../components/Button.jsx";
 import profile3 from '../assets/images/profileimg.png';
+import newProfile from '../assets/new.png';
+import mycv from '../assets/AliulhaqCV.pdf'
 
 const Home = () => {
 	return (
@@ -23,8 +24,8 @@ const Home = () => {
 					</p>
 
 					<div className='flex gap-4'>
-						<Button text={'Contact Me'}/>
-						<Button text={'Download Cv'}/>
+						{/*<Button text={'Contact Me'} />*/}
+						<Button text={'Download Cv'} downloadUrl={mycv}/>
 					</div>
 
 				</div>
@@ -32,9 +33,9 @@ const Home = () => {
 				{/* RIGHT SIDE */}
 				<div className="flex items-center justify-center">
 					<img
-						src={profile3}
+						src={newProfile}
 						alt="profile"
-						className="rounded-lg h-full sm:h-96 w-auto object-cover "
+						className="rounded-lg h-full sm:h-96 w-auto object-cover  "
 					/>
 				</div>
 			</div>
